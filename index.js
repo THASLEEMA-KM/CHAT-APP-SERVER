@@ -9,7 +9,7 @@ const server = http.createServer(app)
 
 const io = socketIo(server , {
     cors:{
-        origin:"https://chat-app-beryl-sigma.vercel.app/",
+        origin:"https://chat-app-beryl-sigma.vercel.app",
         methods:['GET','POST']
     }
 })
@@ -25,7 +25,7 @@ app.use(helmet({
         directives: {
           defaultSrc: ["'self'"],
           scriptSrc: ["'self'", "'unsafe-inline'"],
-          connectSrc: ["'self'", "https://chat-app-beryl-sigma.vercel.app/"],
+          connectSrc: ["'self'", "https://chat-app-beryl-sigma.vercel.app"],
           styleSrc: ["'self'", "'unsafe-inline'"],
           fontSrc: ["'self'", "data:"]
         },
